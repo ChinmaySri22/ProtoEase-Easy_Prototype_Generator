@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Sphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Style Sphere</h1>
+            <button id="cart-icon" aria-label="View Shopping Cart" aria-expanded="false" aria-controls="cart-modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.239A1 1 0 0 0 5.179 3H2v2h2.305l1.429 3.569A1 1 0 0 0 6 9H18a1 1 0 0 0 1-1h3.822a1 1 0 0 0 .82-.569l.866-2.167a1 1 0 0 0-.211-.833zM6 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm12 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm-7.5-8a.5.5 0 0 1-.5-.5V5.5a.5.5 0 0 1 1 0V9.5a.5.5 0 0 1-.5.5z"/>
+                </svg>
+                <span id="cart-count" aria-live="polite">0</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <section id="product-grid">
+            <!-- Products will be dynamically added here -->
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="cart-title">Shopping Cart</h2>
+                <button id="close-modal" aria-label="Close Shopping Cart">X</button>
+            </div>
+            <div id="cart-items"></div>
+            <div class="modal-footer">
+                <p>Subtotal: <span id="cart-total">$0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-message" class="error" aria-live="polite" role="alert" hidden></div>
+
+    <footer>
+        <p>&copy; 2024 Style Sphere</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
